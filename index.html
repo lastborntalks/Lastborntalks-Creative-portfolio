@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Graphic Design Portfolio</title>
+<meta name="description" content="Graphic design portfolio and selected works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body oncontextmenu="return false;">
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="mark">◆</div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-stamp">
+      <span class="stamp-text">PORTFOLIO</span>
+    </div>
+    <h1 class="hero-name">YOUR NAME<span class="accent-dot">.</span></h1>
+    <p class="hero-tagline">Graphic designer — brand identity, print &amp; digital.</p>
+    <div class="reg-mark reg-tl">＋</div>
+    <div class="reg-mark reg-tr">＋</div>
+    <div class="reg-mark reg-bl">＋</div>
+    <div class="reg-mark reg-br">＋</div>
+  </section>
+
+  <!-- ============ WORK GRID ============ -->
+  <section id="work" class="work-section">
+    <div class="section-label"><span class="mono">FIG. 01</span> SELECTED WORK</div>
+    <div class="work-grid" id="workGrid"><!-- populated by script.js --></div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about-section">
+    <div class="section-label"><span class="mono">FIG. 02</span> ABOUT</div>
+    <p class="about-text">
+      Write two or three sentences here about who you are, what kind of design
+      work you do, and the industries or clients you work best with. Keep it
+      plain and specific — skip the buzzwords.
+    </p>
+    <div class="spec-row">
+      <div class="spec-chip"><span class="mono">TOOLS</span>Figma / Illustrator / InDesign</div>
+      <div class="spec-chip"><span class="mono">BASED</span>Your City</div>
+      <div class="spec-chip"><span class="mono">STATUS</span>Available for freelance</div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact-section">
+    <div class="contact-card">
+      <div class="reg-mark reg-tl">＋</div>
+      <div class="reg-mark reg-br">＋</div>
+      <p class="mono contact-label">GET IN TOUCH</p>
+      <h2 class="contact-headline">Let's make<br>something.</h2>
+      <a href="mailto:you@example.com" class="contact-email">you@example.com</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name. All designs shown remain the property of their creator and may not be reproduced without permission.</p>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="" oncontextmenu="return false;" draggable="false">
+        <div class="watermark-overlay"></div>
+      </div>
+      <div class="lightbox-caption">
+        <p class="mono lightbox-index" id="lightboxIndex"></p>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxMeta" class="mono"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
