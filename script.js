@@ -1,53 +1,38 @@
-/* ============================================================
-   EDIT THIS ARRAY to add your own projects.
-   - title:  project name
-   - year:   year completed
-   - medium: e.g. "Brand Identity", "Poster Series", "Packaging"
-   - image:  path to your image (put files in the /images folder)
-     Recommended: web-res only, 1200-1600px on the long edge, 72-150dpi.
-     Never upload your full-resolution source or print files here.
-   ============================================================ */
 const PROJECTS = [
   {
-    title: "Nord Coffee — Brand Identity",
-    year: "2025",
-    medium: "Brand Identity",
-    image: "https://picsum.photos/seed/nordcoffee/1200/900"
+    title: "Ruth's Bakery — Cakes & Treats Flyer",
+    year: "2026",
+    medium: "Flyer",
+    image: "file_00000000077071f481b411dbb2f672e6.png"
   },
   {
-    title: "Kinetic Festival — Poster Series",
-    year: "2025",
-    medium: "Poster / Print",
-    image: "https://picsum.photos/seed/kinetic/1200/900"
+    title: "Church Program Flyer",
+    year: "2026",
+    medium: "Flyer",
+    image: "file_0000000043c4724385770f2a5da737f2.png"
   },
   {
-    title: "Hearth & Co. — Packaging",
-    year: "2024",
-    medium: "Packaging",
-    image: "https://picsum.photos/seed/hearth/1200/900"
+    title: "Angela's Honey — Business Flyer",
+    year: "2026",
+    medium: "Flyer",
+    image: "file_000000004ad471f4a62c98086a3710a0.png"
   },
   {
-    title: "Studio Vantage — Web Redesign",
-    year: "2024",
-    medium: "Digital / UI",
-    image: "https://picsum.photos/seed/vantage/1200/900"
+    title: "Watchman Sunday Flyer",
+    year: "2026",
+    medium: "Flyer",
+    image: "file_00000000c3dc71f4b3ddc40d731ed504.png"
   },
   {
-    title: "Marrow Records — Album Art",
-    year: "2023",
-    medium: "Album Art",
-    image: "https://picsum.photos/seed/marrow/1200/900"
-  },
-  {
-    title: "Fieldnote — Editorial Layout",
-    year: "2023",
-    medium: "Editorial",
-    image: "https://picsum.photos/seed/fieldnote/1200/900"
+    title: "Redeemers Baptist — Church Flyer",
+    year: "2026",
+    medium: "Flyer",
+    image: "file_000000002f1871f48a7580e82efe2613.png"
   }
 ];
 
 /* Your watermark text — change to your name or initials */
-const WATERMARK_TEXT = "YOUR NAME · SAMPLE ONLY";
+const WATERMARK_TEXT = "LASTBORN CREATIVE · SAMPLE ONLY";
 
 /* Build a tiled diagonal watermark as an SVG data URI.
    This is baked over every preview image so any screenshot
