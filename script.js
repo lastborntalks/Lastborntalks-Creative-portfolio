@@ -2,32 +2,38 @@ const PROJECTS = [
   {
     title: "Ruth's Bakery — Cakes & Treats Flyer",
     year: "2026",
-    medium: "Flyer",
-    image: "file_00000000077071f481b411dbb2f672e6.png"
+    medium: "Business Flyer",
+    image: "images/file_00000000077071f481b411dbb2f672e6.png"
   },
   {
-    title: "Church Program Flyer",
+    title: "Favvy's Clothing & Accessories — Business Flyer",
     year: "2026",
-    medium: "Flyer",
-    image: "file_0000000043c4724385770f2a5da737f2.png"
-  },
-  {
-    title: "Redeemers Baptist — Church Flyer",
-    year: "2026",
-    medium: "Flyer",
-    image: "file_000000002f1871f48a7580e82efe2613.png"
-  },
-  {
-    title: "Watchman Sunday Flyer",
-    year: "2026",
-    medium: "Flyer",
-    image: "file_00000000c3dc71f4b3ddc40d731ed504.png"
+    medium: "Business Flyer",
+    image: "images/file_00000000159071f48e7036cfa792d116.png"
   },
   {
     title: "Angela's Honey — Business Flyer",
     year: "2026",
-    medium: "Flyer",
-    image: "file_000000004ad471f4a62c98086a3710a0.png"
+    medium: "Business Flyer",
+    image: "images/file_000000002f1871f48a7580e82efe2613.png"
+  },
+  {
+    title: "The Lord's Chosen — Youth Programme Flyer",
+    year: "2026",
+    medium: "Church Event Flyer",
+    image: "images/file_0000000043c4724385770f2a5da737f2.png"
+  },
+  {
+    title: "Redeemers Baptist — Sunday Service Flyer",
+    year: "2026",
+    medium: "Church Flyer",
+    image: "images/file_000000004ad471f4a62c98086a3710a0.png"
+  },
+  {
+    title: "Watchman — Sunday Service Flyer",
+    year: "2026",
+    medium: "Church Flyer",
+    image: "images/file_00000000c3dc71f4b3ddc40d731ed504.png"
   }
 ];
 
@@ -65,7 +71,9 @@ function renderGrid() {
   grid.querySelectorAll('.work-card').forEach(card => {
     card.addEventListener('click', () => openLightbox(Number(card.dataset.index)));
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') openLightbox(Number(card.dataset.index));
+      if (e.key === 'Enter' || e.key === ' ') {
+        openLightbox(Number(card.dataset.index));
+      }
     });
   });
 }
@@ -82,7 +90,9 @@ function openLightbox(index) {
   lightboxImg.alt = p.title;
   lightboxTitle.textContent = p.title;
   lightboxMeta.textContent = `${p.medium} — ${p.year}`;
-  lightboxIndex.textContent = `NO. ${String(index + 1).padStart(2, '0')} / ${String(PROJECTS.length).padStart(2, '0')}`;
+  lightboxIndex.textContent =
+    `NO. ${String(index + 1).padStart(2, '0')} / ${String(PROJECTS.length).padStart(2, '0')}`;
+
   document.querySelector('.watermark-overlay').style.backgroundImage = watermarkStyle;
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -94,12 +104,19 @@ function closeLightbox() {
 }
 
 document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
 
 document.addEventListener('dragstart', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
+
 document.addEventListener('contextmenu', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
