@@ -87,7 +87,11 @@ a { color: var(--ink); text-decoration: none; }
   line-height: 0.88;
   letter-spacing: -0.01em;
   max-width: 14ch;
-  color: var(--ink);
+  background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 35%, var(--accent) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .accent-dot { color: var(--accent); }
 .hero-tagline {
