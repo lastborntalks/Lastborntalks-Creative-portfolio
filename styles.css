@@ -279,3 +279,31 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
   }
+/* ===== WhatsApp CTA button ===== */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #0D1B12;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(15px, 2vw, 18px);
+  padding: 16px 32px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5), 0 4px 20px rgba(0,0,0,0.3);
+  animation: whatsapp-pulse 2.4s ease-out infinite;
+  transition: transform 0.2s ease;
+}
+.whatsapp-btn:hover,
+.whatsapp-btn:active {
+  transform: scale(1.05);
+}
+@keyframes whatsapp-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5), 0 4px 20px rgba(0,0,0,0.3); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 4px 20px rgba(0,0,0,0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 20px rgba(0,0,0,0.3); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-btn { animation: none; }
+  }
