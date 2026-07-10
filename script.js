@@ -12,7 +12,7 @@ const PROJECTS = [
     image: "file_0000000043c4724385770f2a5da737f2.png"
   },
   {
-    title: "Angela's Honey — Business Flyer",
+    title: "Redeemers Baptist — Church Flyer",
     year: "2026",
     medium: "Flyer",
     image: "file_000000004ad471f4a62c98086a3710a0.png"
@@ -24,7 +24,7 @@ const PROJECTS = [
     image: "file_00000000c3dc71f4b3ddc40d731ed504.png"
   },
   {
-    title: "Redeemers Baptist — Church Flyer",
+    title: "Angela's Honey — Business Flyer",
     year: "2026",
     medium: "Flyer",
     image: "file_000000002f1871f48a7580e82efe2613.png"
