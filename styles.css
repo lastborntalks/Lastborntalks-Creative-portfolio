@@ -27,12 +27,12 @@ a { color: var(--ink); text-decoration: none; }
 .site-header {
   position: sticky; top: 0; z-index: 50;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 14px clamp(20px, 5vw, 64px);
+  padding: 12px clamp(20px, 5vw, 64px);
   background: linear-gradient(120deg, var(--navy-deep) 0%, var(--navy-light) 100%);
   border-bottom: 1px solid var(--line);
 }
 .site-logo {
-  height: 56px;
+  height: 44px;
   width: auto;
 }
 .site-header nav { display: flex; gap: 32px; }
