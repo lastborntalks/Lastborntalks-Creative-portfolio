@@ -15,7 +15,7 @@ const PROJECTS = [
     title: "Redeemers Baptist — Church Flyer",
     year: "2026",
     medium: "Flyer",
-    image: "file_000000004ad471f4a62c98086a3710a0.png"
+    image: "file_000000002f1871f48a7580e82efe2613.png"
   },
   {
     title: "Watchman Sunday Flyer",
@@ -27,16 +27,12 @@ const PROJECTS = [
     title: "Angela's Honey — Business Flyer",
     year: "2026",
     medium: "Flyer",
-    image: "file_000000002f1871f48a7580e82efe2613.png"
+    image: "file_000000004ad471f4a62c98086a3710a0.png"
   }
 ];
 
-/* Your watermark text — change to your name or initials */
 const WATERMARK_TEXT = "LASTBORN CREATIVE · SAMPLE ONLY";
 
-/* Build a tiled diagonal watermark as an SVG data URI.
-   This is baked over every preview image so any screenshot
-   or saved file carries visible, hard-to-remove attribution. */
 function buildWatermarkDataUri(text) {
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
@@ -74,7 +70,6 @@ function renderGrid() {
   });
 }
 
-/* ---------- Lightbox ---------- */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxTitle = document.getElementById('lightboxTitle');
@@ -102,10 +97,6 @@ document.getElementById('lightboxClose').addEventListener('click', closeLightbox
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
-/* ---------- Basic copy friction ----------
-   Note: none of this stops a determined visitor — screenshots and
-   devtools can always capture what the browser renders. This just
-   removes the easy, casual ways to save a full-res-looking file. */
 document.addEventListener('dragstart', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
@@ -113,7 +104,6 @@ document.addEventListener('contextmenu', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
 
-/* Footer year */
 document.getElementById('year').textContent = new Date().getFullYear();
 
 renderGrid();
