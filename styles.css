@@ -1,8 +1,10 @@
 /* ===== Tokens =====
   Navy deep:    #0F1420
   Navy light:   #1A2540
+  Cream:        #F5F0E6
   Paper (fg):   #F0EEE8
-  Accent (red): #8C2A1F   <- update this once you confirm your exact logo red
+  Accent (red): #8C2A1F
+  Gold (glow):  #D4AF37
   Stone:        #8B8FA3
   Line:         #2A3350
 */
@@ -10,8 +12,10 @@
 :root {
   --navy-deep: #0F1420;
   --navy-light: #1A2540;
+  --cream: #F5F0E6;
   --ink: #F0EEE8;
   --accent: #8C2A1F;
+  --gold: #D4AF37;
   --stone: #8B8FA3;
   --line: #2A3350;
 }
@@ -43,7 +47,7 @@ a { color: var(--ink); text-decoration: none; }
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
-.mark { color: var(--accent); font-size: 18px; }
+.mark { color: var(--gold); font-size: 18px; }
 .site-header nav { display: flex; gap: 32px; }
 .site-header nav a {
   font-family: 'IBM Plex Mono', monospace;
@@ -53,7 +57,7 @@ a { color: var(--ink); text-decoration: none; }
 }
 .site-header nav a::after {
   content: ''; position: absolute; left: 0; bottom: -2px;
-  width: 0; height: 1px; background: var(--accent); transition: width 0.25s ease;
+  width: 0; height: 1px; background: var(--gold); transition: width 0.25s ease;
 }
 .site-header nav a:hover::after { width: 100%; }
 
@@ -70,55 +74,50 @@ a { color: var(--ink); text-decoration: none; }
 .hero-stamp {
   position: absolute;
   top: 8%; right: 6%;
-  border: 3px solid var(--accent);
-  color: var(--accent);
+  border: 3px solid var(--gold);
+  color: var(--gold);
   padding: 10px 20px;
   transform: rotate(9deg);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
   letter-spacing: 0.15em;
   font-size: clamp(11px, 1.4vw, 14px);
   opacity: 0.9;
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.25);
 }
 .hero-name {
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-weight: 900;
-  font-size: clamp(64px, 14vw, 168px);
-  line-height: 0.88;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(52px, 11vw, 128px);
+  line-height: 0.95;
   letter-spacing: -0.01em;
-  max-width: 14ch;
-  background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 35%, var(--accent) 90%);
+  max-width: 16ch;
+  background: linear-gradient(100deg, var(--cream) 0%, var(--cream) 45%, var(--navy-light) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
 }
-.accent-dot { color: var(--accent); }
+.accent-dot {
+  background: none;
+  -webkit-text-fill-color: var(--gold);
+  color: var(--gold);
+}
 .hero-tagline {
   margin-top: 20px;
   font-size: clamp(14px, 1.6vw, 18px);
   color: var(--stone);
   max-width: 40ch;
 }
-.reg-mark {
-  position: absolute;
-  color: var(--stone);
-  font-size: 20px;
-  opacity: 0.6;
-}
-.reg-tl { top: 20px; left: 20px; }
-.reg-tr { top: 20px; right: 20px; }
-.reg-bl { bottom: 20px; left: 20px; }
-.reg-br { bottom: 20px; right: 20px; }
 
 /* ===== Section label ===== */
 .section-label {
-  display: flex; align-items: center; gap: 12px;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--stone);
+  color: var(--gold);
   padding: 48px clamp(20px, 5vw, 64px) 24px;
 }
-.section-label .mono { color: var(--accent); }
 
 /* ===== Work grid ===== */
 .work-section { padding-bottom: 40px; background: var(--navy-deep); }
@@ -161,9 +160,9 @@ a { color: var(--ink); text-decoration: none; }
   border-top: 1px solid var(--line);
 }
 .work-meta h3 {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
@@ -180,7 +179,7 @@ a { color: var(--ink); text-decoration: none; }
   display: flex; flex-direction: column; gap: 4px;
   color: var(--ink);
 }
-.spec-chip .mono { font-size: 10px; color: var(--accent); }
+.spec-chip .mono { font-size: 10px; color: var(--gold); }
 
 /* ===== Contact ===== */
 .contact-section { padding: 40px clamp(20px, 5vw, 64px) 80px; background: var(--navy-deep); }
@@ -190,23 +189,24 @@ a { color: var(--ink); text-decoration: none; }
   color: var(--ink);
   padding: clamp(40px, 8vw, 88px) clamp(24px, 6vw, 64px);
   text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.12);
 }
-.contact-label { color: var(--stone); font-size: 12px; letter-spacing: 0.15em; margin-bottom: 16px; }
+.contact-label { color: var(--gold); font-size: 12px; letter-spacing: 0.15em; margin-bottom: 16px; }
 .contact-headline {
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-weight: 900;
-  font-size: clamp(40px, 8vw, 88px);
-  line-height: 0.95;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 7vw, 76px);
+  line-height: 1;
   margin-bottom: 24px;
 }
 .contact-email {
   font-family: 'IBM Plex Mono', monospace;
   color: var(--ink);
   font-size: clamp(14px, 2vw, 18px);
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid var(--gold);
   padding-bottom: 4px;
 }
-.contact-card .reg-mark { color: var(--ink); opacity: 0.4; }
 
 /* ===== Footer ===== */
 .site-footer {
@@ -257,10 +257,10 @@ a { color: var(--ink); text-decoration: none; }
 }
 .lightbox-caption { color: var(--ink); text-align: center; }
 .lightbox-caption h3 {
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 28px; font-weight: 700; margin: 6px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px; font-weight: 700; margin: 6px 0;
 }
-.lightbox-index { color: var(--accent); font-size: 12px; }
+.lightbox-index { color: var(--gold); font-size: 12px; }
 .lightbox-caption p.mono { color: var(--stone); font-size: 12px; }
 
 /* ===== Responsive ===== */
@@ -276,6 +276,6 @@ a { color: var(--ink); text-decoration: none; }
 
 /* Keyboard focus visibility */
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
-}
+  }
