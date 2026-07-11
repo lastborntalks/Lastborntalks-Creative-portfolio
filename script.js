@@ -65,12 +65,30 @@ function renderGrid() {
   const cards = grid.querySelectorAll('.work-card');
   cards.forEach(function (card) {
     card.addEventListener('click', function () {
-      openLightbox(Number(card.dataset.index));
+      const idx = Number(card.dataset.index);
+      trackImageClick(idx);
+      openLightbox(idx);
     });
     card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') openLightbox(Number(card.dataset.index));
+      if (e.key === 'Enter' || e.key === ' ') {
+        const idx = Number(card.dataset.index);
+        trackImageClick(idx);
+        openLightbox(idx);
+      }
     });
   });
+}
+
+function trackImageClick(index) {
+  const p = PROJECTS[index];
+  if (!p) return;
+  if (window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count({
+      path: "flyer-click-" + p.title,
+      title: p.title,
+      event: true
+    });
+  }
 }
 
 const lightbox = document.getElementById('lightbox');
