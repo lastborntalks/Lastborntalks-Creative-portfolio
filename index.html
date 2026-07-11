@@ -69,4 +69,25 @@
   </section>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Lastborn Creative. All designs shown remain the prop
+    <p>© <span id="year"></span> Lastborn Creative. All designs shown remain the property of their creator and may not be reproduced without permission.</p>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="" oncontextmenu="return false;" draggable="false">
+        <div class="watermark-overlay"></div>
+      </div>
+      <div class="lightbox-caption">
+        <p class="mono lightbox-index" id="lightboxIndex"></p>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxMeta" class="mono"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
